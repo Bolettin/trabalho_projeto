@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações Técnicas</title>
+    <link rel="stylesheet" href="definicoes.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" href="#ftp">Servidor FTP</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#javascript">JavaScript</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#docker">Docker</a>
+        </li>
+      </ul>
+
+    <h1 class="titulo">Definições</h1>
+    <br>
+    <div class="content-container">
+        <section id="ftp">
+            <h1>Servidor FTP</h1>
+            <p>Um servidor FTP é um computador que permite o envio e recebimento de arquivos através do protocolo FTP
+                (File Transfer Protocol). Ele pode ser um computador dedicado ou uma máquina virtual.
+                O FTP é um protocolo de comunicação que permite a transferência de arquivos entre um servidor e um
+                cliente. Ele é um dos protocolos mais antigos e simples ainda em uso para a transferência de dados. </p>
+        </section>
+
+        <section id="javascript">
+            <h1>JavaScript</h1>
+            <p>JavaScript é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem
+                dinâmica fraca e multiparadigma. Juntamente com HTML e CSS, o JavaScript é uma das três principais
+                tecnologias da World Wide Web.</p>
+        </section>
+
+        <section id="docker">
+            <h1>Docker</h1>
+            <p>O Docker é uma plataforma open source que facilita a criação e administração de ambientes isolados. Ele
+                possibilita o empacotamento de uma aplicação ou ambiente dentro de um container, se tornando portátil
+                para qualquer outro host que contenha o Docker instalado.</p>
+        </section>
+        <br>
+
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="ftp.webp" alt="Primeiro Slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="java.jpg" alt="Segundo Slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="docker.png" alt="Terceiro Slide">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="back-button"  onclick="location.href='menu.html'">Voltar</button>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+    
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                } else {
+                    entry.target.classList.remove('show');
+                }
+            });
+        });
+    
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+    
+</body>
+
+</html>

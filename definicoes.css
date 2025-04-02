@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #807d7d;
+}
+
+.titulo{
+   text-align: center;
+   color: rgb(0, 0, 0);
+   margin-top: 2%;
+}
+
+.navbar {
+    background: white;
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.navbar a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+.content-container {
+    background: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 60%;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+button.prev {
+    left: 10px;
+}
+button.next {
+    right: 10px;
+}
+
+
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+section {
+    opacity: 0;
+    transition: opacity 2s ease-in-out; /* Alteração aqui */
+}
+
+section.show {
+    opacity: 1;
+}
+
